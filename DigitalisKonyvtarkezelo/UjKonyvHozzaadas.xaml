@@ -1,0 +1,38 @@
+﻿<Window x:Class="DigitalisKonyvtarkezelo.UjKonyvHozzaadas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalisKonyvtarkezelo"
+        mc:Ignorable="d"
+        Title="UjKonyvHozzaadas" Height="336" Width="477">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Könyvcím:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="KonyvcimTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Szerző Neve:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="SzerzoNeveTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Kiadás éve:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="KiadasEveTextBox" Grid.Row="2" Grid.Column="1" Margin="5" PreviewTextInput="NumberValidationTextBox"/>
+
+        <TextBlock Text="Kategória:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" Margin="5"/>
+        <ListBox x:Name="KategoriaListBox" Grid.Row="3" Grid.Column="1" Margin="5" SelectionMode="Multiple">
+            
+        </ListBox>
+
+        <Button Content="Hozzáadás" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Margin="5" Click="HozzaadasButton_Click"/>
+    </Grid>
+</Window>

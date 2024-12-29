@@ -1,0 +1,24 @@
+﻿<Window x:Class="DigitalisKonyvtarkezelo.UserControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalisKonyvtarkezelo"
+        mc:Ignorable="d"
+        Title="UserControl" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="felhasznaloLista" Margin="10,66,400,66" SelectionChanged="felhasznaloLista_SelectionChanged"/>
+        <CheckBox x:Name="admincheck" Content="Adminisztrátori jogosultság" HorizontalAlignment="Left" Margin="442,273,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="cancelButton" Content="Mégse" HorizontalAlignment="Left" Margin="433,318,0,0" VerticalAlignment="Top" Height="50" Width="71" Click="cancelButton_Click"/>
+        <Button x:Name="deleteButton" Content="Törlés" HorizontalAlignment="Left" Margin="536,318,0,0" VerticalAlignment="Top" Height="50" Width="71" Click="deleteButton_Click"/>
+        <Button x:Name="modifyButton" Content="Mentés" HorizontalAlignment="Left" Margin="645,318,0,0" VerticalAlignment="Top" Height="50" Width="71" Click="modifyButton_Click"/>
+        <TextBox x:Name="felhasznalonevMezo" HorizontalAlignment="Left" Margin="442,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Height="34"/>
+        <TextBox x:Name="emailMezo" HorizontalAlignment="Left" Margin="442,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Height="32"/>
+        <PasswordBox x:Name="jelszoMezo" HorizontalAlignment="Left" Margin="442,217,0,0" VerticalAlignment="Top" Width="274" Height="32"/>
+        <Label Content="Felhasználónév" HorizontalAlignment="Left" Margin="442,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email cím" HorizontalAlignment="Left" Margin="442,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Jelszó" HorizontalAlignment="Left" Margin="442,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Felhasználók kezelése és szerkesztése" HorizontalAlignment="Left" Margin="22,14,0,0" VerticalAlignment="Top" Height="47" Width="415" FontSize="20"/>
+
+    </Grid>
+</Window>
